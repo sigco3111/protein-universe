@@ -130,5 +130,137 @@
   "gene": "ACTB",
   "cif": "assets/structures/P60709.cif",
   "cif_kb": 341
+ },
+ {
+  "acc": "P03452",
+  "entryId": "AF-0000000211971555",
+  "name_en": "Hemagglutinin",
+  "organism": "Influenza A virus",
+  "length": 565,
+  "plddt": 77.7,
+  "gene": "HA",
+  "cif": "assets/structures/P03452.cif",
+  "cif_kb": 369
+ },
+ {
+  "acc": "P03468",
+  "entryId": "AF-0000000211971556",
+  "name_en": "Neuraminidase",
+  "organism": "Influenza A virus",
+  "length": 454,
+  "plddt": 86.4,
+  "gene": "NA",
+  "cif": "assets/structures/P03468.cif",
+  "cif_kb": 292
+ },
+ {
+  "acc": "P04578",
+  "entryId": "AF-0000000365763106",
+  "name_en": "Envelope glycoprotein gp160",
+  "organism": "Human immunodeficiency virus type 1 group M subtype B",
+  "length": 856,
+  "plddt": 72.1,
+  "gene": "env",
+  "cif": "assets/structures/P04578.cif",
+  "cif_kb": 1426
+ },
+ {
+  "acc": "Q9IH62",
+  "entryId": "AF-0000000365962212",
+  "name_en": "Glycoprotein G",
+  "organism": "Nipah virus",
+  "length": 602,
+  "plddt": 81.6,
+  "gene": "G",
+  "cif": "assets/structures/Q9IH62.cif",
+  "cif_kb": 873
+ },
+ {
+  "acc": "P0DTC4",
+  "entryId": "AF-0000000365840316",
+  "name_en": "Envelope small membrane protein",
+  "organism": "Severe acute respiratory syndrome coronavirus 2",
+  "length": 75,
+  "plddt": 75.8,
+  "gene": "E",
+  "cif": "assets/structures/P0DTC4.cif",
+  "cif_kb": 132
+ },
+ {
+  "acc": "P19821",
+  "entryId": "AF-P19821-F1",
+  "name_en": "DNA polymerase I, thermostable",
+  "organism": "Thermus aquaticus",
+  "length": 832,
+  "plddt": 91.4,
+  "gene": "polA",
+  "cif": "assets/structures/P19821.cif",
+  "cif_kb": 752
+ },
+ {
+  "acc": "P02945",
+  "entryId": "AF-P02945-F1",
+  "name_en": "Bacteriorhodopsin",
+  "organism": "Halobacterium salinarum",
+  "length": 262,
+  "plddt": 91.7,
+  "gene": "bop",
+  "cif": "assets/structures/P02945.cif",
+  "cif_kb": 236
+ },
+ {
+  "acc": "P00800",
+  "entryId": "AF-P00800-F1",
+  "name_en": "Thermolysin",
+  "organism": "Bacillus thermoproteolyticus",
+  "length": 548,
+  "plddt": 92.0,
+  "gene": "npr",
+  "cif": "assets/structures/P00800.cif",
+  "cif_kb": 488
+ },
+ {
+  "acc": "P42443",
+  "entryId": "AF-P42443-F1",
+  "name_en": "Protein RecA",
+  "organism": "Deinococcus radiodurans",
+  "length": 363,
+  "plddt": 88.8,
+  "gene": "recA",
+  "cif": "assets/structures/P42443.cif",
+  "cif_kb": 314
+ },
+ {
+  "acc": "Q51739",
+  "entryId": "AF-Q51739-F1",
+  "name_en": "Tungsten-containing aldehyde ferredoxin oxidoreductase",
+  "organism": "Pyrococcus furiosus",
+  "length": 605,
+  "plddt": 98.1,
+  "gene": "aor",
+  "cif": "assets/structures/Q51739.cif",
+  "cif_kb": 539
+ },
+ {
+  "acc": "P00875",
+  "entryId": "AF-P00875-F1",
+  "name_en": "Ribulose bisphosphate carboxylase large chain",
+  "organism": "Spinacia oleracea",
+  "length": 475,
+  "plddt": 97.0,
+  "gene": "rbcL",
+  "cif": "assets/structures/P00875.cif",
+  "cif_kb": 429
+ },
+ {
+  "acc": "P29972",
+  "entryId": "AF-P29972-F1",
+  "name_en": "Aquaporin-1",
+  "organism": "Homo sapiens",
+  "length": 269,
+  "plddt": 90.8,
+  "gene": "AQP1",
+  "cif": "assets/structures/P29972.cif",
+  "cif_kb": 239
  }
 ]
