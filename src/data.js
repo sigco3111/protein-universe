@@ -236,10 +236,10 @@ export const CENTERS = {
   tools: [500, 1030],
   virus: [500, 1475],
   extreme: [240, 1855],
-  legend: [505, 2240],
+  legend: [505, 2455],
 };
 
-export const WORLD = { w: 1000, h: 2400 };
+export const WORLD = { w: 1000, h: 2480 };
 
 export function byAcc(acc) {
   return PROTEINS.find((p) => p.acc === acc);
