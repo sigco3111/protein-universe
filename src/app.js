@@ -789,15 +789,14 @@ function startChallenge(root, mode) {
         </div>
       </div>
       <div class="cq-stage" id="cq-stage">
-        <div class="cq-pane" id="pane-a"></div>
-        <div class="cq-pane hidden" id="pane-b"></div>
+        <div class="cq-pane" id="cq-pane"></div>
       </div>
       <div class="cq-choices" id="cq-choices"></div>
       <button class="cq-quit" id="cq-quit">그만하기</button>
     </div>`;
 
-  const panes = [$('#pane-a'), $('#pane-b')];
-  let curPane = 0;
+  // Mol*는 보이는 상태에서 생성되어야 렌더링되므로 단일 패널을 사용한다.
+  const pane = $('#cq-pane');
   let curQ = genQuestion(pool);
   let nextQ = genQuestion(pool);
 
@@ -847,13 +846,13 @@ function startChallenge(root, mode) {
   }
 
   function showQuestion() {
-    const pane = panes[curPane];
-    panes[1 - curPane].classList.add('hidden');
-    pane.classList.remove('hidden');
+    preparePane(pane, curQ);
     const box = $('#cq-choices');
     box.innerHTML = curQ.choices.map((c) => `<button class="choice" data-acc="${c.acc}">${c.name}</button>`).join('');
     box.querySelectorAll('.choice').forEach((b) => { b.onclick = () => answer(b); });
     st.locked = false;
+    // 다음 문제 구조를 HTTP 캐시에 미리 받아 둔다 (같은 출처).
+    if (nextQ && nextQ.type !== 'desc') fetch(nextQ.answer.cif).catch(() => {});
   }
 
   function updateHud() {
@@ -909,10 +908,8 @@ function startChallenge(root, mode) {
     setTimeout(() => {
       if (st.over) return;
       curQ = nextQ;
-      curPane = 1 - curPane;
-      showQuestion();
       nextQ = genQuestion(pool);
-      preparePane(panes[1 - curPane], nextQ);
+      showQuestion();
     }, correct ? 550 : 950);
   }
 
@@ -949,9 +946,7 @@ function startChallenge(root, mode) {
 
   $('#cq-quit').onclick = finish;
 
-  // 첫 문제와 다음 문제 준비
-  preparePane(panes[curPane], curQ);
-  preparePane(panes[1 - curPane], nextQ);
+  // 첫 문제 표시 (뷰어는 패널이 보이는 상태에서 생성된다)
   showQuestion();
 
   if (mode === 'timeattack') {
