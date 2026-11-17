@@ -236,7 +236,7 @@ export const CENTERS = {
   tools: [500, 1030],
   virus: [500, 1475],
   extreme: [240, 1855],
-  legend: [505, 2370],
+  legend: [505, 2240],
 };
 
 export const WORLD = { w: 1000, h: 2400 };
