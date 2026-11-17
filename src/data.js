@@ -235,7 +235,7 @@ export const CENTERS = {
   oxygen: [480, 620],
   tools: [500, 1030],
   virus: [500, 1475],
-  extreme: [500, 1810],
+  extreme: [430, 1855],
   legend: [505, 2210],
 };
 
