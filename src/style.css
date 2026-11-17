@@ -40,13 +40,13 @@ nav {
   font-size: 12px; font-weight: 600; color: #b9c9ff;
 }
 .universe-hint {
-  position: absolute; bottom: 14px; left: 0; right: 0; text-align: center;
-  font-size: 12px; color: rgba(150,160,200,0.6); pointer-events: none; z-index: 2;
+  position: absolute; bottom: 20px; left: 0; right: 0; text-align: center;
+  font-size: 12px; color: rgba(200,208,235,0.85); pointer-events: none; z-index: 2;
 }
 .universe-wrap .attrib {
-  position: absolute; bottom: 34px; left: 0; right: 0; text-align: center;
-  padding: 6px 0; background: rgba(6,9,20,0.85); backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); z-index: 2;
+  position: absolute; bottom: 0; left: 0; right: 0; text-align: center;
+  padding: 8px 0 46px; background: rgba(6,9,20,0.85); backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); z-index: 1;
 }
 
 /* ---------- 공통 ---------- */
@@ -106,7 +106,7 @@ nav {
 .museum-head { padding: 24px 20px 6px; }
 .museum-head h1 { font-size: 24px; letter-spacing: -0.02em; }
 .museum-progress { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; font-weight: 600; }
-.museum-progress .bar { flex: 1; height: 8px; border-radius: 999px; background: rgba(90,70,40,0.12); overflow: hidden; }
+.museum-progress .bar { flex: 1; height: 8px; border-radius: 999px; background: rgba(90,70,40,0.25); overflow: hidden; }
 .museum-progress .fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #c9a24b, #e5c878); }
 .museum-sub { font-size: 13px; color: #7a6f5c; margin-top: 10px; line-height: 1.5; }
 .museum-grid {
