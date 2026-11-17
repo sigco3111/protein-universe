@@ -756,7 +756,7 @@ function renderChallenge(root) {
       </div>
       <div class="challenge-types">
         <div class="ct-item">🧬 <b>구조 보고 맞히기</b> — 실제 3D 구조가 제시됩니다</div>
-        <div class="ct-item">📖 <b>설명 듣고 맞히기</b> — 역할 설명만 보고 맞힙니다</div>
+        <div class="ct-item">📖 <b>설명 읽고 맞히기</b> — 역할 설명만 보고 맞힙니다</div>
         <div class="ct-item">🔭 <b>일부만 보고 맞히기</b> — 구조의 한 조각만 보입니다</div>
       </div>
       ${attribution()}
@@ -806,7 +806,7 @@ function startChallenge(root, mode) {
     if (q.type === 'desc') {
       pane.innerHTML = `
         <div class="cq-desc-card">
-          <div class="cq-desc-tag">📖 설명 듣고 맞히기</div>
+          <div class="cq-desc-tag">📖 설명 읽고 맞히기</div>
           <div class="cq-desc-line">“${q.answer.oneLiner}”</div>
           <div class="cq-desc-meta">${q.answer.organism} · ${q.answer.length.toLocaleString()} aa</div>
         </div>`;
