@@ -11,37 +11,43 @@ const LS_SOUND = 'pu_sound';
 const LS_BEST_TA = 'pu_challenge_best_timeattack';
 const LS_BEST_SV = 'pu_challenge_best_survival';
 
+// 저장소 접근이 막힌 환경(사생활 보호 모드·용량 초과)에서도 앱이 멈추지 않도록 감싼다.
+const ls = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch { /* 저장 불가 시 이번 세션만 유지되지 않음 */ } },
+};
+
 const store = {
   discovered() {
-    try { return JSON.parse(localStorage.getItem(LS_DISCOVERED) || '[]'); } catch { return []; }
+    try { return JSON.parse(ls.get(LS_DISCOVERED) || '[]'); } catch { return []; }
   },
   addDiscovered(acc) {
     const d = store.discovered();
-    if (!d.includes(acc)) { d.push(acc); localStorage.setItem(LS_DISCOVERED, JSON.stringify(d)); }
+    if (!d.includes(acc)) { d.push(acc); ls.set(LS_DISCOVERED, JSON.stringify(d)); }
   },
-  best() { return parseInt(localStorage.getItem(LS_BEST) || '0', 10) || 0; },
-  setBest(v) { localStorage.setItem(LS_BEST, String(v)); },
-  plays() { return parseInt(localStorage.getItem(LS_PLAYS) || '0', 10) || 0; },
-  addPlay() { localStorage.setItem(LS_PLAYS, String(store.plays() + 1)); },
+  best() { return parseInt(ls.get(LS_BEST) || '0', 10) || 0; },
+  setBest(v) { ls.set(LS_BEST, String(v)); },
+  plays() { return parseInt(ls.get(LS_PLAYS) || '0', 10) || 0; },
+  addPlay() { ls.set(LS_PLAYS, String(store.plays() + 1)); },
   museumSeen() {
-    try { return JSON.parse(localStorage.getItem(LS_MUSEUM_SEEN) || '[]'); } catch { return []; }
+    try { return JSON.parse(ls.get(LS_MUSEUM_SEEN) || '[]'); } catch { return []; }
   },
-  setMuseumSeen(list) { localStorage.setItem(LS_MUSEUM_SEEN, JSON.stringify(list)); },
-  legendRevealed() { return localStorage.getItem(LS_LEGEND) === '1'; },
-  revealLegend() { localStorage.setItem(LS_LEGEND, '1'); },
+  setMuseumSeen(list) { ls.set(LS_MUSEUM_SEEN, JSON.stringify(list)); },
+  legendRevealed() { return ls.get(LS_LEGEND) === '1'; },
+  revealLegend() { ls.set(LS_LEGEND, '1'); },
   milestones() {
-    try { return JSON.parse(localStorage.getItem(LS_MILESTONES) || '[]'); } catch { return []; }
+    try { return JSON.parse(ls.get(LS_MILESTONES) || '[]'); } catch { return []; }
   },
   addMilestone(m) {
     const ms = store.milestones();
-    if (!ms.includes(m)) { ms.push(m); localStorage.setItem(LS_MILESTONES, JSON.stringify(ms)); }
+    if (!ms.includes(m)) { ms.push(m); ls.set(LS_MILESTONES, JSON.stringify(ms)); }
   },
-  soundOn() { return localStorage.getItem(LS_SOUND) !== '0'; },
-  setSound(on) { localStorage.setItem(LS_SOUND, on ? '1' : '0'); },
+  soundOn() { return ls.get(LS_SOUND) !== '0'; },
+  setSound(on) { ls.set(LS_SOUND, on ? '1' : '0'); },
   bestChallenge(mode) {
-    return parseInt(localStorage.getItem(mode === 'survival' ? LS_BEST_SV : LS_BEST_TA) || '0', 10) || 0;
+    return parseInt(ls.get(mode === 'survival' ? LS_BEST_SV : LS_BEST_TA) || '0', 10) || 0;
   },
-  setBestChallenge(mode, v) { localStorage.setItem(mode === 'survival' ? LS_BEST_SV : LS_BEST_TA, String(v)); },
+  setBestChallenge(mode, v) { ls.set(mode === 'survival' ? LS_BEST_SV : LS_BEST_TA, String(v)); },
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -950,8 +956,10 @@ function startChallenge(root, mode) {
   showQuestion();
 
   if (mode === 'timeattack') {
+    // 탭이 백그라운드로 가면 setInterval이 느려지므로 실제 시계(마감 시각) 기준으로 남은 시간을 계산한다.
+    const deadline = Date.now() + TA_SECONDS * 1000;
     st.timer = setInterval(() => {
-      st.timeLeft -= 1;
+      st.timeLeft = Math.max(0, Math.round((deadline - Date.now()) / 100));
       const sec = st.timeLeft / 10;
       const el = $('#cq-time');
       if (el) {
