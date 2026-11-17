@@ -235,8 +235,8 @@ export const CENTERS = {
   oxygen: [480, 620],
   tools: [500, 1030],
   virus: [500, 1475],
-  extreme: [430, 1855],
-  legend: [505, 2210],
+  extreme: [240, 1855],
+  legend: [505, 2370],
 };
 
 export const WORLD = { w: 1000, h: 2400 };
