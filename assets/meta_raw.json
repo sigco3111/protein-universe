@@ -1,0 +1,134 @@
+[
+ {
+  "acc": "P02144",
+  "entryId": "AF-P02144-F1",
+  "name_en": "Myoglobin",
+  "organism": "Homo sapiens",
+  "length": 154,
+  "plddt": 97.2,
+  "gene": "MB",
+  "cif": "assets/structures/P02144.cif",
+  "cif_kb": 148
+ },
+ {
+  "acc": "P69905",
+  "entryId": "AF-P69905-F1",
+  "name_en": "Hemoglobin subunit alpha",
+  "organism": "Homo sapiens",
+  "length": 142,
+  "plddt": 98.1,
+  "gene": "HBA1",
+  "cif": "assets/structures/P69905.cif",
+  "cif_kb": 134
+ },
+ {
+  "acc": "P01308",
+  "entryId": "AF-P01308-F1",
+  "name_en": "Insulin",
+  "organism": "Homo sapiens",
+  "length": 110,
+  "plddt": 52.9,
+  "gene": "INS",
+  "cif": "assets/structures/P01308.cif",
+  "cif_kb": 107
+ },
+ {
+  "acc": "P61626",
+  "entryId": "AF-P61626-F1",
+  "name_en": "Lysozyme C",
+  "organism": "Homo sapiens",
+  "length": 148,
+  "plddt": 94.1,
+  "gene": "LYZ",
+  "cif": "assets/structures/P61626.cif",
+  "cif_kb": 144
+ },
+ {
+  "acc": "P42212",
+  "entryId": "AF-P42212-F1",
+  "name_en": "Green fluorescent protein",
+  "organism": "Aequorea victoria",
+  "length": 238,
+  "plddt": 96.6,
+  "gene": "GFP",
+  "cif": "assets/structures/P42212.cif",
+  "cif_kb": 225
+ },
+ {
+  "acc": "P0DTC2",
+  "entryId": "AF-0000000365840314",
+  "name_en": "Spike glycoprotein",
+  "organism": "Severe acute respiratory syndrome coronavirus 2",
+  "length": 1273,
+  "plddt": 67.1,
+  "gene": "S",
+  "cif": "assets/structures/P0DTC2.cif",
+  "cif_kb": 2099
+ },
+ {
+  "acc": "P01241",
+  "entryId": "AF-P01241-F1",
+  "name_en": "Somatotropin",
+  "organism": "Homo sapiens",
+  "length": 217,
+  "plddt": 79.3,
+  "gene": "GH1",
+  "cif": "assets/structures/P01241.cif",
+  "cif_kb": 207
+ },
+ {
+  "acc": "P99999",
+  "entryId": "AF-P99999-F1",
+  "name_en": "Cytochrome c",
+  "organism": "Homo sapiens",
+  "length": 105,
+  "plddt": 97.9,
+  "gene": "CYCS",
+  "cif": "assets/structures/P99999.cif",
+  "cif_kb": 106
+ },
+ {
+  "acc": "P04637",
+  "entryId": "AF-P04637-F1",
+  "name_en": "Cellular tumor antigen p53",
+  "organism": "Homo sapiens",
+  "length": 393,
+  "plddt": 75.1,
+  "gene": "TP53",
+  "cif": "assets/structures/P04637.cif",
+  "cif_kb": 355
+ },
+ {
+  "acc": "P02768",
+  "entryId": "AF-P02768-F1",
+  "name_en": "Albumin",
+  "organism": "Homo sapiens",
+  "length": 609,
+  "plddt": 92.7,
+  "gene": "ALB",
+  "cif": "assets/structures/P02768.cif",
+  "cif_kb": 552
+ },
+ {
+  "acc": "Q99ZW2",
+  "entryId": "AF-Q99ZW2-F1",
+  "name_en": "CRISPR-associated endonuclease Cas9/Csn1",
+  "organism": "Streptococcus pyogenes serotype M1",
+  "length": 1368,
+  "plddt": 88.4,
+  "gene": "cas9",
+  "cif": "assets/structures/Q99ZW2.cif",
+  "cif_kb": 1310
+ },
+ {
+  "acc": "P60709",
+  "entryId": "AF-P60709-F1",
+  "name_en": "Actin, cytoplasmic 1",
+  "organism": "Homo sapiens",
+  "length": 375,
+  "plddt": 95.2,
+  "gene": "ACTB",
+  "cif": "assets/structures/P60709.cif",
+  "cif_kb": 341
+ }
+]
