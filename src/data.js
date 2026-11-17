@@ -26,12 +26,12 @@ export const PROTEINS = [
     x: 370, y: 700,
   },
   {
-    acc: 'P69905', name: '헤모글로빈 알파 사슬', name_en: 'Hemoglobin subunit alpha', category: 'oxygen',
+    acc: 'P69905', name: '헤모글로빈 알파 사슬', short: '헤모글로빈 α', name_en: 'Hemoglobin subunit alpha', category: 'oxygen',
     organism: '사람', length: 142, plddt: 98.1, cif: 'assets/structures/P69905.cif',
     oneLiner: '혈액 속 산소 운반체의 한 사슬',
     story: '적혈구에서 산소를 나르는 헤모글로빈은 알파 사슬 2개와 베타 사슬 2개가 모여 완성됩니다. 이 별은 그중 알파 사슬 하나의 예측 구조입니다.',
     caution: '실제 작동 형태는 4개 사슬이 모인 조립체입니다. 이 항목은 그중 한 사슬입니다.',
-    x: 580, y: 680,
+    x: 610, y: 655,
   },
   {
     acc: 'P02768', name: '혈청 알부민', name_en: 'Albumin', category: 'oxygen',
@@ -78,14 +78,14 @@ export const PROTEINS = [
     x: 350, y: 1130,
   },
   {
-    acc: 'P42212', name: 'GFP (형광 단백질)', name_en: 'Green fluorescent protein', category: 'tools',
+    acc: 'P42212', name: 'GFP (형광 단백질)', short: 'GFP', name_en: 'Green fluorescent protein', category: 'tools',
     organism: '해파리 (Aequorea victoria)', length: 238, plddt: 96.6, cif: 'assets/structures/P42212.cif',
     oneLiner: '스스로 빛나는 해파리의 단백질',
     story: '해파리에서 온 형광 단백질로, 스스로 초록빛을 냅니다. 살아있는 세포에 형광 표지를 붙이는 도구가 되어 생명과학을 바꿨고, 2008년 노벨 화학상을 받았습니다.',
     x: 620, y: 1100,
   },
   {
-    acc: 'P0DTC2', name: '코로나19 스파이크', name_en: 'Spike glycoprotein', category: 'tools',
+    acc: 'P0DTC2', name: '코로나19 스파이크', short: '스파이크', name_en: 'Spike glycoprotein', category: 'tools',
     organism: '코로나19 바이러스 (SARS-CoV-2)', length: 1273, plddt: 67.1, cif: 'assets/structures/P0DTC2.cif',
     oneLiner: '바이러스가 세포를 여는 열쇠',
     story: '바이러스 표면의 스파이크는 인간 세포의 ACE2 수용체에 달라붙어 감염을 시작합니다. 백신과 항체 치료제의 주요 표적이 된, 가장 유명한 바이러스 단백질입니다.',

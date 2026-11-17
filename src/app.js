@@ -163,7 +163,7 @@ function renderUniverse(root) {
       // 라벨
       ctx.font = '600 12px system-ui, sans-serif';
       ctx.fillStyle = known ? 'rgba(235,240,255,0.95)' : 'rgba(160,170,200,0.6)';
-      ctx.fillText(known ? p.name : '?', s.x, s.y + baseR * 3.2 + 14);
+      ctx.fillText(known ? (p.short || p.name) : '?', s.x, s.y + baseR * 3.2 + 14);
     }
 
     raf = requestAnimationFrame(draw);
